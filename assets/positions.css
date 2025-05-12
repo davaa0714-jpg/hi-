@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+
+#position{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+}
+
+#position .container{
+    width: 1300px;
+    margin: auto;
+    justify-content: center;
+}
+
+#position .subcontainer{
+    width: 93%;
+    margin: auto;
+}
+
+#position .filter-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+#position .filter-item{
+    text-decoration: none;
+    color: crimson;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    box-shadow: inset 0 0 0 0 crimson;
+    cursor: pointer;
+    width: 60px;
+    text-align: center;
+    padding: 3px 10px;
+    border-radius: 8px;
+}
+
+#position .active-filter{
+    background-color: crimson;
+    color: white;
+}
+
+#position .filter-item:hover{
+    color: #fff;
+    box-shadow: inset 210px 0 0 0 crimson;
+}
+
+.pos-intro h3{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.pos-intro p{
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.pos-intro p a{
+    font-weight: 500;
+}
+
+iframe{
+    width: 100%;
+    height: 750px;
+}
+
+.pos-intro span{
+    color: #212529;
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+
+ul li{
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+ul{
+    margin: 10px 20px;
+}
+
+ol li{
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+ol{
+    margin: 10px 20px;
+}
+
+table{
+    
+    font-weight: 300;
+    width: 100%;
+}
+
+tr:first-child{
+    font-weight: 500;
+    text-align: center;
+}
+
+th, td{
+    border-bottom: 1px solid rgba(230, 230, 230, 0.7);
+    padding: 5px 10px;
+    font-size: 14px;
+    /* font-weight: 400; */
+}
+
+td:nth-child(1), td:nth-child(3), td:nth-child(4){
+    text-align: center;
+}
+
+@media screen and (min-width:1122px){
+    th, td{
+        max-width: 880px;
+    }
+}
+
+@media(max-width:590px){
+    iframe{
+        width: 100%;
+        height: 200px;
+    }
+}

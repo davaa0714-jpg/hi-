@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    /* background: linear-gradient(rgba(236, 244, 245), rgba(245, 228, 228)); */
+}
+
+#svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+}
+
+#svg .container{
+    width: 1300px;
+    margin: auto;
+    justify-content: center;
+}
+
+#svg .subcontainer{
+    width: 93%;
+    margin: auto;
+}
+
+
+#isometric-city g{
+    transition: all .5s;
+}
+
+#isometric-city #construction:hover, #isometric-city #parking:hover, #isometric-city #bus:hover, #isometric-city #road:hover, #isometric-city #tree:hover, #isometric-city #st-light:hover, #isometric-city #school:hover, #isometric-city #furniture:hover, #isometric-city #xot:hover,  #isometric-city #retail:hover{
+    cursor: pointer;
+    /* transform: scale(1.002) translateZ(0); */
+}
+
+#isometric-city #terrain, #isometric-city #other, #isometric-city #bridge_x5F_Bus, #isometric-city #deco, #isometric-city #agents, #isometric-city #river, #isometric-city #engineer, #isometric-city #house{
+    pointer-events: none;
+}
+
+.nothovered {
+    filter: brightness(0.5) saturate(0.1) contrast(1.2) blur(5px);
+}
+
+.svg{
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.desc-box {
+    background-color: lightgray;
+    border-radius: 10px;
+    opacity: .8;
+}
+
+.desc-box a{
+    text-decoration: none;
+}
+
+.desc-box span{
+    margin-right: 5px;
+    background-color: crimson;
+    color: white;
+    padding: 0 8px;
+    border-radius: 5px;
+}
+
+.desc-box span, .desc-box p{
+    font-size: 14px;
+}
+
+.desc-box p{
+    padding: 5px;
+    color: black;
+}
+
+.desc-box{
+    width: 500px;
+    padding: 15px;
+    position: absolute;
+}
+
+.green{
+    visibility: hidden;
+    top: 25%;
+    left: 30%;
+}
+
+.construct{
+    visibility: hidden;
+    top: 38%;
+    left: 38%;
+}
+
+.car-park{
+    visibility: hidden;
+    top: 30%;
+    right: 5%;
+}
+
+.rd-st{
+    visibility: hidden;
+    top: 30%;
+    left: 30%;
+}
+
+.school-hospital{
+    visibility: hidden;
+    top: 40%;
+    left: 42%;
+}
+
+.xot{
+    visibility: hidden;
+    top: 40%;
+    left: 15%;
+}
+
+.commercial{
+    visibility: hidden;
+    top: 50%;
+    left: 20%;
+}
+
+.bus{
+    visibility: hidden;
+    top: 55%;
+    left: 15%;
+}
+
+.furniture{
+    visibility: hidden;
+    top: 30%;
+    left: 20%;
+}
+
+.lights{
+    visibility: hidden;
+    top: 40%;
+    left: 30%;
+}
+
+.hovered{
+    visibility: visible;
+}
+
+.inactive {
+    filter: brightness(0.5) saturate(0.1) contrast(1.2) blur(5px);
+}
+
+.active{
+    visibility: visible;
+}
+
+/* .readmore{
+    text-align: right;
+    padding-top: 10px;
+}
+
+.readmore a{
+    color: crimson;
+    padding: 3px 10px;
+    text-decoration: none;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    box-shadow: inset 0 0 0 0 crimson;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.readmore i{
+    margin-left: 2px;
+}
+
+.readmore a:hover{
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 crimson;
+} */
+
+@media(max-width:590px){
+    .desc-box{
+        display: none;
+    }
+}
+

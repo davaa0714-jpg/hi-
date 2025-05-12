@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+
+#hrreport{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+}
+
+#hrreport .container{
+    width: 1300px;
+    margin: auto;
+    justify-content: center;
+}
+
+#hrreport .subcontainer{
+    width: 93%;
+    margin: auto;
+}
+
+#hrreport .filter-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+#hrreport .filter-item{
+    text-decoration: none;
+    color: crimson;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    box-shadow: inset 0 0 0 0 crimson;
+    cursor: pointer;
+    width: 60px;
+    text-align: center;
+    padding: 3px 10px;
+    border-radius: 8px;
+}
+
+#hrreport .active-filter{
+    background-color: crimson;
+    color: white;
+}
+
+#hrreport .filter-item:hover{
+    color: #fff;
+    box-shadow: inset 210px 0 0 0 crimson;
+}
+
+
+iframe{
+    width: 100%;
+    height: 900px;
+}
+
+@media(max-width:590px){  
+    iframe{
+        height: 450px;
+    }
+}

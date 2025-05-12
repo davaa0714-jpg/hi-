@@ -1,0 +1,6 @@
+[25-Sep-2024 14:07:48 UTC] PHP Warning:  include(app/db/db.php): failed to open stream: No such file or directory in /home/standardubgov/public_html/inactive/standard-project-one.php on line 2
+[25-Sep-2024 14:07:48 UTC] PHP Warning:  include(app/db/db.php): failed to open stream: No such file or directory in /home/standardubgov/public_html/inactive/standard-project-one.php on line 2
+[25-Sep-2024 14:07:48 UTC] PHP Warning:  include(): Failed opening 'app/db/db.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/standardubgov/public_html/inactive/standard-project-one.php on line 2
+[07-Dec-2024 13:09:43 UTC] PHP Warning:  include(app/db/db.php): failed to open stream: No such file or directory in /home/standardubgov/public_html/inactive/standard-project-one.php on line 2
+[07-Dec-2024 13:09:43 UTC] PHP Warning:  include(app/db/db.php): failed to open stream: No such file or directory in /home/standardubgov/public_html/inactive/standard-project-one.php on line 2
+[07-Dec-2024 13:09:43 UTC] PHP Warning:  include(): Failed opening 'app/db/db.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/standardubgov/public_html/inactive/standard-project-one.php on line 2

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* zoom: 99%; */
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+/* #tushaal{
+    background-image: linear-gradient(rgba(236, 244, 245, 0.7), rgba(245, 228, 228, 0.7));
+} */
+
+#bodlogo, #dynamic-bodlogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+}
+
+#bodlogo .container, #dynamic-bodlogo .container{
+    width: 1300px;
+    margin: auto;
+    justify-content: center;
+}
+
+#bodlogo .subcontainer, #dynamic-bodlogo .subcontainer{
+    width: 93%;
+    margin: auto;
+}
+
+#dynamic-bodlogo .subcontainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#bodlogo .filter-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+#bodlogo .filter-item{
+    text-decoration: none;
+    color: crimson;
+    padding: 2px 4px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    box-shadow: inset 0 0 0 0 crimson;
+    cursor: pointer;
+    width: 180px;
+    text-align: center;
+}
+
+#bodlogo .active-filter{
+    background-color: crimson;
+    color: white;
+    padding: 2px 4px;
+}
+
+#bodlogo .filter-item:hover{
+    color: #fff;
+    box-shadow: inset 210px 0 0 0 crimson;
+}
+
+
+.bodlogo-one{
+    margin-right: 15px;
+    width: 100%;
+}
+
+hr{
+    opacity: .3;
+}
+
+.bodlogo-one .pdf-wrapper{
+    margin-top: 10px;
+}
+
+#pdf{
+    width: 100%;
+    height: 650px;
+}
+
+.other-plan{
+    max-width: 300px;
+    margin-left: 15px;
+}
+
+.other-plan .op-title1{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.other-plan a{
+    text-decoration: none;
+    color: #212529;
+}
+
+.plan-one .date{
+    font-size: 13px;
+    opacity: .5;
+    color: #212529;
+    /* margin-bottom: 5px; */
+}
+
+.other-card{
+    display: flex;
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: .3s ease;
+    border-bottom: 1px solid rgba(230, 230, 230, 0.7);
+}
+
+.other-post-content .op-title2{
+    font-size: 14px;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.other-post-content p{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.other-card:hover{
+    transform: translateY(-5px);
+}
+
+#dynamic-duramjuram .title{
+    color: white;
+    background: crimson;
+    padding: 0 3px;
+}
+
+@media screen and (max-width: 1100px){
+    .other-plan{
+        display: none;
+    }
+
+    .bodlogo-one{
+        margin-right: 0;
+        width: 100%;
+    }
+    
+    hr{
+        display: none;
+    }
+}
+
+@media(max-width:590px){
+    #pdf{
+        height: 150px;
+    }
+}

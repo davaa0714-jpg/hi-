@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* zoom: 99%; */
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+/* #tushaal{
+    background-image: linear-gradient(rgba(236, 244, 245, 0.7), rgba(245, 228, 228, 0.7));
+} */
+
+#att, #dynamic-att{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 24px;
+}
+
+#att .container, #dynamic-att .container{
+    width: 1300px;
+    margin: auto;
+    justify-content: center;
+}
+
+#att .subcontainer, #dynamic-att .subcontainer{
+    width: 93%;
+    margin: auto;
+}
+
+#dynamic-att .subcontainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pdf-wrapper {
+    width: 100%;
+}
+
+iframe{
+    width:100%;
+    padding-top:20px;
+    height: 1150px;
+}
+
+.att-one{
+    width:75%;
+}
+
+.att-one h3{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.att-one span{
+    background-color: white;
+    color: gray;
+    font-size: 13px;
+    padding: 0 5px;
+    border-left: 1px solid black;
+    border-radius: 0;
+    margin-left: 5px;
+}
+
+
+@media(max-width:590px){
+    iframe{
+        height: 450px;
+    }
+    
+    .att-one{
+        width:100%;
+    }
+}
