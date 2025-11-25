@@ -1,0 +1,17 @@
+vendor/
+node_modules/
+uploads/
+*.zip
+*.rar
+*.7z
+*.mp4
+*.avi
+*.mov
+*.psd
+*.exe
+*.dll
+*.iso
+*.db
+*.log
+tmp/
+cache/
