@@ -1,0 +1,41 @@
+[03-Aug-2022 14:08:29 Asia/Ulaanbaatar] PHP Warning:  include(db.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:08:29 Asia/Ulaanbaatar] PHP Warning:  include(db.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:08:29 Asia/Ulaanbaatar] PHP Warning:  include(): Failed opening 'db.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:12:48 Asia/Ulaanbaatar] PHP Warning:  include(db.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:12:48 Asia/Ulaanbaatar] PHP Warning:  include(db.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:12:48 Asia/Ulaanbaatar] PHP Warning:  include(): Failed opening 'db.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:14:22 Asia/Ulaanbaatar] PHP Warning:  include(db.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:14:22 Asia/Ulaanbaatar] PHP Warning:  include(db.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:14:22 Asia/Ulaanbaatar] PHP Warning:  include(): Failed opening 'db.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:19:35 Asia/Ulaanbaatar] PHP Warning:  include(db.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:19:35 Asia/Ulaanbaatar] PHP Warning:  include(db.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:19:35 Asia/Ulaanbaatar] PHP Warning:  include(): Failed opening 'db.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:19:43 Asia/Ulaanbaatar] PHP Warning:  include(db.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:19:43 Asia/Ulaanbaatar] PHP Warning:  include(db.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 14:19:43 Asia/Ulaanbaatar] PHP Warning:  include(): Failed opening 'db.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 15:33:40 Asia/Ulaanbaatar] PHP Warning:  include(db.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 15:33:40 Asia/Ulaanbaatar] PHP Warning:  include(db.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 15:33:40 Asia/Ulaanbaatar] PHP Warning:  include(): Failed opening 'db.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 16:09:23 Asia/Ulaanbaatar] PHP Warning:  include(../app/db/user.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 16:09:23 Asia/Ulaanbaatar] PHP Warning:  include(../app/db/user.php): failed to open stream: No such file or directory in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 16:09:23 Asia/Ulaanbaatar] PHP Warning:  include(): Failed opening '../app/db/user.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home1/standardubgov/public_html/admin/news-admin.php on line 2
+[03-Aug-2022 16:19:32 Asia/Ulaanbaatar] PHP Fatal error:  Cannot redeclare display() (previously declared in /home1/standardubgov/public_html/app/db/db.php:6) in /home1/standardubgov/public_html/app/db/db.php on line 6
+[03-Aug-2022 16:20:47 Asia/Ulaanbaatar] PHP Fatal error:  Cannot redeclare display() (previously declared in /home1/standardubgov/public_html/app/db/db.php:6) in /home1/standardubgov/public_html/app/db/db.php on line 6
+[03-Aug-2022 16:21:22 Asia/Ulaanbaatar] PHP Fatal error:  Cannot redeclare display() (previously declared in /home1/standardubgov/public_html/app/db/db.php:6) in /home1/standardubgov/public_html/app/db/db.php on line 6
+[03-Aug-2022 16:26:24 Asia/Ulaanbaatar] PHP Fatal error:  Cannot redeclare display() (previously declared in /home1/standardubgov/public_html/app/db/db.php:6) in /home1/standardubgov/public_html/app/db/db.php on line 6
+[05-Aug-2022 08:57:27 Asia/Ulaanbaatar] PHP Parse error:  syntax error, unexpected '$posts' (T_VARIABLE) in /home1/standardubgov/public_html/admin/news-admin.php on line 6
+[05-Aug-2022 08:57:54 Asia/Ulaanbaatar] PHP Fatal error:  Cannot redeclare display() (previously declared in /home1/standardubgov/public_html/app/db/db.php:6) in /home1/standardubgov/public_html/app/db/db.php on line 6
+[05-Aug-2022 08:58:47 Asia/Ulaanbaatar] PHP Fatal error:  Cannot redeclare display() (previously declared in /home1/standardubgov/public_html/app/db/db.php:6) in /home1/standardubgov/public_html/app/db/db.php on line 6
+[05-Aug-2022 09:23:37 Asia/Ulaanbaatar] PHP Fatal error:  Call to a member function bind_param() on boolean in /home1/standardubgov/public_html/app/db/db.php on line 99
+[05-Aug-2022 09:26:45 Asia/Ulaanbaatar] PHP Fatal error:  Call to a member function bind_param() on boolean in /home1/standardubgov/public_html/app/db/db.php on line 99
+[05-Aug-2022 09:27:12 Asia/Ulaanbaatar] PHP Fatal error:  Call to a member function bind_param() on boolean in /home1/standardubgov/public_html/app/db/db.php on line 99
+[05-Aug-2022 09:28:49 Asia/Ulaanbaatar] PHP Fatal error:  Call to a member function bind_param() on boolean in /home1/standardubgov/public_html/app/db/db.php on line 99
+[05-Aug-2022 09:31:46 Asia/Ulaanbaatar] PHP Fatal error:  Call to a member function bind_param() on boolean in /home1/standardubgov/public_html/app/db/db.php on line 99
+[05-Aug-2022 11:10:44 Asia/Ulaanbaatar] PHP Fatal error:  Call to a member function bind_param() on boolean in /home1/standardubgov/public_html/app/db/db.php on line 99
+[05-Aug-2022 13:52:05 Asia/Ulaanbaatar] PHP Parse error:  syntax error, unexpected ';' in /home1/standardubgov/public_html/admin/posts.php on line 13
+[05-Aug-2022 15:26:26 Asia/Ulaanbaatar] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /home1/standardubgov/public_html/admin/posts.php on line 24
+[05-Aug-2022 15:26:28 Asia/Ulaanbaatar] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /home1/standardubgov/public_html/admin/posts.php on line 24
+[05-Aug-2022 15:39:01 Asia/Ulaanbaatar] PHP Parse error:  syntax error, unexpected 'for' (T_FOR) in /home1/standardubgov/public_html/admin/posts.php on line 22
+[05-Aug-2022 15:41:24 Asia/Ulaanbaatar] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 133693425 bytes) in /home1/standardubgov/public_html/admin/posts.php on line 29
+[09-Aug-2022 16:07:46 Asia/Ulaanbaatar] PHP Fatal error:  Cannot redeclare display() (previously declared in /home1/standardubgov/public_html/app/db/db.php:6) in /home1/standardubgov/public_html/app/db/db.php on line 6
+[15-Aug-2022 15:15:06 Asia/Ulaanbaatar] PHP Fatal error:  Cannot redeclare display() (previously declared in /home1/standardubgov/public_html/app/db/db.php:6) in /home1/standardubgov/public_html/app/db/db.php on line 6

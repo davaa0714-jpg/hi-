@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+
+#commission-one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+}
+
+#commission-one .container{
+    width: 1300px;
+    margin: auto;
+    justify-content: center;
+}
+
+#commission-one .subcontainer{
+    width: 93%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.commission-wrapper{
+    width: 75%;
+}
+
+iframe{
+    width: 100%;
+    height: 1150px;
+}
+
+.commission-info p{
+    font-size: 15px;
+    font-weight: 400;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.commission-type h3{
+    font-size: 17px;
+    display: inline;
+    font-weight: 600;
+}
+
+
+
+@media(max-width:590px){
+    .commission-wrapper{
+        width: 100%;
+    }
+    
+    iframe{
+        height: 450px;
+    }
+}

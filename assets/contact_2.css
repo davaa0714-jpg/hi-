@@ -1,0 +1,41 @@
+
+
+
+.phone{
+    padding: 50px 0;
+    margin: 0 50px;
+    border-top: 1px solid #c7c7c7;
+}
+
+
+.phone table{
+    font-weight: 300;
+    width: 100%;
+
+}
+
+.phone tr:first-child{
+    font-weight: 500;
+    text-align: center;
+}
+
+.phone th, td{
+    border-bottom: 1px solid rgba(230, 230, 230, 0.7);
+    padding: 5px 10px;
+    font-size: 14px;
+    /* font-weight: 400; */
+}
+
+.phone td:nth-child(3), td:nth-child(4){
+    text-align: center;
+}
+
+@media(max-width:590px){
+    .phone th, td{
+        font-size: 10px;
+    }
+
+    .phone{
+        margin: 0;
+    }
+}

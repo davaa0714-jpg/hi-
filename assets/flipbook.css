@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+#flipbook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+    background: linear-gradient(rgba(236, 244, 245), rgba(245, 228, 228));
+}
+
+#flipbook .container{
+    width: 1300px;
+    margin: auto;
+    justify-content: center;
+}
+
+#flipbook .subcontainer{
+    width: 93%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+#intro1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+}
+
+#intro1 .container{
+    width: 1300px;
+    margin: auto;
+    justify-content: center;
+}
+
+#intro1 .subcontainer{
+    width: 93%;
+    margin: auto;
+    /* display: flex; */
+    text-align: center;
+}
+
+/* Book */
+.scene, .scene2, .scene3 {
+    width: 580px;
+    height: 760px;
+    /* margin: 5% 5% 5% 50%; */
+    transition: transform 0.5s;
+    perspective: 3000px;
+}
+
+.book, .book2, .book3{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.page, .page2, .page3 {
+    cursor: pointer;
+    position: absolute;
+    /* color: black; */
+    width: 100%;
+    height: 100%;
+  
+    transition: 0.5s transform;
+    transform: translateZ(-1px);
+    transform-style: preserve-3d;  
+    transform-origin: left center;
+}
+
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  margin-left: 1px;
+}
+.back {
+  transform: rotateY(180deg);
+}
+
+.page.active, .page2.active2, .page3.active3 {
+    z-index: 1;
+    transform: translateZ(0);
+  }
+.page.flipped, .page2.flipped2,.page3.flipped3 {
+    transform: translateZ(0) rotateY(-180deg);
+}
+.page.flipped:last-of-type {
+    z-index: 1;
+}
+.page2.flipped2:last-of-type {
+    z-index: 1;
+}
+.page3.flipped3:last-of-type {
+    z-index: 1;
+}
+
+
+
+/* Controller Buttons */
+#prev-btn, #next-btn, #prev-btn2, #next-btn2, #prev-btn3, #next-btn3 {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+#prev-btn:focus, #next-btn:focus, #prev-btn2:focus, #next-btn2:focus, #prev-btn3:focus, #next-btn3:focus{
+    outline: none;
+}
+
+#prev-btn:hover .fa-circle-chevron-left, #prev-btn2:hover .fa-circle-chevron-left, #prev-btn3:hover .fa-circle-chevron-left {
+    color: lightgray;
+}
+
+#next-btn:hover .fa-circle-chevron-right, #next-btn2:hover .fa-circle-chevron-right, #next-btn3:hover .fa-circle-chevron-right {
+    color: lightgray;
+}
+
+#prev-btn i, #next-btn i, #prev-btn2 i, #next-btn2 i, #prev-btn3 i, #next-btn3 i  {
+    font-size: 50px;
+    color: gray;
+    transition: ease 0.3s;
+}
+
+
+.thumbnail{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: none;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+/* intro */
+.standard-name span{
+    font-size: 17px;
+    background-color: crimson;
+    color: white;
+    margin-right: 5px;
+    padding: 2px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.standard-info p{
+    font-size: 15px;
+    font-weight: 200;
+    padding: 10px 0;
+}
+
+.standard-name h3{
+    font-size: 17px;
+    display: inline;
+    font-weight: 600;
+}
+
+.download i{
+    margin-right: 8px;
+}
+
+.download{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.download a{
+    color: crimson;
+    padding: 3px 10px;
+    text-decoration: none;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    box-shadow: inset 0 0 0 0 crimson;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.download a:hover{
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 crimson;
+}
+
+@media(max-width: 1380px){
+    .scene, .scene2, .scene3 {
+        width: 530px;
+        height: 690px;
+    }
+}
+
+@media(max-width: 1150px){
+    .scene, .scene2, .scene3 {
+        width: 480px;
+        height: 640px;
+    }
+}
+
+@media(max-width:590px){
+    .thumbnail{
+        display: block;
+    }
+    .scene, .button, .scene2, .scene3 {
+        display: none;
+    }
+}

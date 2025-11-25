@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(rgba(236, 244, 245), rgba(245, 228, 228));
+    height: 100vh;
+}
+
+.login-box{
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 330px;
+    transform: translate(-50%, -70%);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+input{
+    display: block;
+    font-size: 15px;
+    background: white;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 10px 10px;
+    margin: 15px 0;
+    border-bottom: 1px solid crimson;
+    font-family: "Montserrat", sans-serif;
+}
+
+img{
+    width: 100px;
+    position: absolute;
+    top: -35px;
+}
+
+button{
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    background: crimson;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 6px;
+    transition: all 0.4s ease;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+
+.login-box div{
+    display: flex;
+}
+
+.login-box div p{
+    font-size: 13px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: crimson;
+    animation: horizontal-shaking .75s;
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(3px) }
+    50% { transform: translateX(-3px) }
+    75% { transform: translateX(3px) }
+    100% { transform: translateX(0) }
+}
+
+
+::placeholder{
+    font-size: 13px;
+    opacity: .8;
+}
+
+input[type="password"]:not(:placeholder-shown){
+    letter-spacing: 0.125em;
+    font-weight: bold;
+}

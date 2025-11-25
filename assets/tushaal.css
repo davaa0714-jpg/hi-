@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* zoom: 99%; */
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+/* #tushaal{
+    background-image: linear-gradient(rgba(236, 244, 245, 0.7), rgba(245, 228, 228, 0.7));
+} */
+
+#tushaal, #dynamic-tushaal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+}
+
+#tushaal .container, #dynamic-tushaal .container{
+    width: 1300px;
+    margin: auto;
+    justify-content: center;
+}
+
+#tushaal .subcontainer, #dynamic-tushaal .subcontainer{
+    width: 93%;
+    margin: auto;
+}
+
+#dynamic-tushaal .subcontainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#tushaal .filter-container, #dynamic-tushaal .filter-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+#tushaal .year{
+    padding-bottom:15px;
+}
+
+
+#tushaal .filter-item, #dynamic-tushaal .filter-item{
+    text-decoration: none;
+    color: crimson;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    box-shadow: inset 0 0 0 0 crimson;
+    cursor: pointer;
+    width: 222px;
+    text-align: center;
+    padding: 3px 10px;
+    border-radius: 8px;
+}
+
+#tsuhaal .year-item{
+    width: 100px;
+}
+
+#tushaal .active-filter, #dynamic-tushaal .active-filter{
+    background-color: crimson;
+    color: white;
+}
+
+#tushaal .filter-item:hover, #dynamic-tushaal .filter-item:hover{
+    color: #fff;
+    box-shadow: inset 222px 0 0 0 crimson;
+}
+ 
+
+
+.tushaal-box .date, .tushaal-one .date{
+    font-size: 13px;
+    opacity: .5;
+    color: #212529;
+    /* margin-bottom: 5px; */
+}
+
+.tushaal-one{
+    margin-right: 15px;
+    width: 100%;
+}
+
+hr{
+    opacity: .3;
+}
+
+.tushaal-one .pdf-wrapper{
+    margin-top: 10px;
+}
+
+#pdf{
+    width: 100%;
+    height: 975px;
+}
+
+.other-tushaal{
+    max-width: 300px;
+    margin-left: 15px;
+}
+
+.other-tushaal .op-title1{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.other-tushaal a{
+    text-decoration: none;
+    color: #212529;
+}
+
+.other-card{
+    display: flex;
+     /*border-radius: 10px; */
+     /*box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: .3s ease;
+    border-bottom: 1px solid rgba(230, 230, 230, 0.7);
+}
+
+.other-post-content .op-title2{
+    font-size: 15px;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 400;
+}
+
+.other-post-content p{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.other-card:hover{
+    transform: translateY(-5px);
+}
+
+#dynamic-tushaal .title{
+    color: white;
+    background: crimson;
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-weight: 200;
+}
+
+#dynamic-tushaal h3{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1100px){
+    .other-tushaal{
+        display: none;
+    }
+
+    .tushaal-one{
+        margin-right: 0;
+        width: 100%;
+    }
+
+    hr{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 450px){
+    #tushaal .filter-container, #dynamic-tushaal .filter-container{
+        display: block;
+    }
+
+    #tushaal .filter-container, #dynamic-tushaal .filter-container{
+        display: block;
+        text-align: center;
+    }
+
+    #tushaal .filter-container div, #dynamic-tushaal .filter-container div{
+        margin: 5px auto;
+    }
+
+    #pdf{
+        height: 450px;
+    }
+
+    #tushaal .tushaalshiidver{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+        justify-content: center;
+        gap: 0.75rem;
+        margin-top: 20px;
+    }
+}

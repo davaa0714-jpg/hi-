@@ -1,0 +1,383 @@
+/* ============================
+   GLOBAL & LAYOUT
+   ============================ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(rgba(236, 244, 245), rgba(245, 228, 228));
+    color: #484848;
+}
+
+/* ============================
+   NAVBAR
+   ============================ */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: transparent;
+}
+
+.navbar img{
+    width: 100px;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li{
+    margin: 0 20px;
+    position: relative;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: #212529;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.nav-list li .fa-circle-user{
+    font-size: 32px;
+    color: gray;
+}
+
+.user-op{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -118px;
+    background: white;
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-list li:hover .user-op{
+    display: block;
+}
+
+.user-op li{
+    padding: 5px 25px;
+    color: gray;
+}
+
+.user-op li:hover{
+    background-color: #f5f5f5;
+}
+
+.user-op li a{
+    text-decoration: none;
+    color: gray;
+}
+
+.user-op li a:hover{
+    color: crimson;
+}
+
+/* ============================
+   WRAPPER
+   ============================ */
+.wrapper{
+    display: flex;
+    gap: 20px;
+}
+
+/* ============================
+   SIDEBAR
+   ============================ */
+.sidebar{
+    flex: 1;
+    background-color: #f8f8f8;
+    padding: 20px 15px;
+    border-radius: 12px;
+    height: calc(100vh - 114px);
+    position: sticky;
+    top: 114px;
+}
+
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li{
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: all 0.2s ease;
+}
+
+.sidebar ul li:hover{
+    background-color: #fff;
+}
+
+.sidebar ul a{
+    text-decoration: none;
+    color: #484848;
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i{
+    font-size: 20px;
+    color: #484848;
+    margin-right: 10px;
+}
+
+.sidebar ul .active{
+    color: crimson;
+}
+
+.sidebar ul .active li{
+    background-color: #fff;
+}
+
+/* ============================
+   CONTENT / ADMIN AREA
+   ============================ */
+.container{
+    padding: 20px 40px;
+}
+
+.container h2{
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form elements */
+form textarea, form input[type="text"], form input[type="hidden"]{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 14px;
+    resize: vertical;
+}
+
+form button{
+    background-color: crimson;
+    color: #fff;
+    font-size: 13px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+form button:hover{
+    opacity: 0.8;
+}
+
+/* Alert message */
+.alert{
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* ============================
+   BUTTONS, LINKS, COLOR
+   ============================ */
+a{
+    color: crimson;
+    text-decoration: none;
+}
+
+a:hover{
+    color: darkred;
+}
+
+button, .btn{
+    background-color: crimson;
+    color: #fff;
+}
+
+button:hover, .btn:hover{
+    opacity: 0.8;
+}
+
+/* ============================
+   ABOUT US CONTENT
+   ============================ */
+.aboutus-box{
+    background: white;
+    padding: 30px 35px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.aboutus-box h2{
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 12px;
+    border-left: 4px solid crimson;
+    padding-left: 10px;
+}
+
+.aboutus-box p{
+    font-size: 13px;
+    line-height: 1.7;
+    color: #484848;
+    margin-bottom: 14px;
+}
+
+.about-section{
+    margin-bottom: 30px;
+}
+
+.aboutus-values ul,
+.aboutus-strategy ul,
+.aboutus-direction ul{
+    margin-left: 20px;
+}
+
+.aboutus-values li,
+.aboutus-strategy li,
+.aboutus-direction li{
+    font-size: 13px;
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+.aboutus-box strong{
+    font-weight: 700;
+    color: #333;
+}
+/* ====== Container ====== */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ====== Headings ====== */
+h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* ====== Sections ====== */
+.section {
+    margin-bottom: 20px;
+}
+.section textarea, 
+.section input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-size: 1em;
+}
+
+/* ====== Buttons ====== */
+.btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.2s;
+    margin-top: 5px;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+.btn-danger {
+    background-color: #dc3545;
+}
+.btn-danger:hover {
+    background-color: #b52a37;
+}
+.btn-warning {
+    background-color: #ffc107;
+    color: #333;
+}
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* ====== Table ====== */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+.table th {
+    background-color: #f0f0f0;
+}
+
+/* ====== Alert ====== */
+.alert {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border-radius: 5px;
+    border: 1px solid #bee5eb;
+}
+
+/* ====== Inline Forms in Table ====== */
+.table form {
+    display: inline-block;
+    margin: 0;
+}
+.table input[type="text"] {
+    width: 120px;
+    margin-right: 5px;
+}
+
+/* ====== Responsive ====== */
+@media screen and (max-width: 768px) {
+    .table input[type="text"] {
+        width: 100px;
+        margin-bottom: 5px;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+

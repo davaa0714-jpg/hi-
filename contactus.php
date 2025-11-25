@@ -1,0 +1,146 @@
+<?php
+$page = 'contactus';
+include("app/db/users.php"); // Include DB connection
+
+// --- Contact info ---
+$contact_info = [];
+$result = $conn->query("SELECT * FROM contact_info ORDER BY order_index");
+if ($result) {
+    $contact_info = $result->fetch_all(MYSQLI_ASSOC);
+}
+
+// --- Departments and staff ---
+$departments = [];
+$staff_by_dept = [];
+
+$dept_result = $conn->query("SELECT * FROM departments ORDER BY order_index, name");
+if ($dept_result && $dept_result->num_rows > 0) {
+    $departments = $dept_result->fetch_all(MYSQLI_ASSOC);
+    foreach ($departments as $dept) {
+        $staff_result = $conn->query("SELECT * FROM staff WHERE department_id = {$dept['id']} ORDER BY order_index, position");
+        $staff_by_dept[$dept['id']] = $staff_result ? $staff_result->fetch_all(MYSQLI_ASSOC) : [];
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/main.css">
+  <link rel="stylesheet" href="assets/contact.css">
+  <link rel="stylesheet" href="assets/contact_2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+  <title>Холбоо барих | Хяналт шалгалтын газар</title>
+</head>
+
+<body>
+  <?php include("header.php"); ?>
+
+  <section class="contact-section">
+    <div class="contact-bg">
+      <h2>Холбоо барих</h2>
+      <div class="line"><div></div></div>
+      <p class="text">Хяналт шалгалтын газар</p>
+    </div>
+
+    <div class="contact-body">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <?php if (!empty($contact_info)) { ?>
+            <?php foreach ($contact_info as $info) { ?>
+                <div>
+                    <?php if(!empty($info['icon_class'])) { ?>
+                        <span><i class="<?php echo htmlspecialchars($info['icon_class']); ?>"></i></span>
+                    <?php } ?>
+                    <span><?php echo htmlspecialchars($info['label']); ?></span>
+                    <?php
+                    $lines = explode("\n", $info['value']);
+                    foreach ($lines as $line) {
+                        echo '<span class="text">'.htmlspecialchars($line).'</span>';
+                    }
+                    ?>
+                </div>
+            <?php } ?>
+        <?php } else { ?>
+            <p>Холбоо барих мэдээлэл одоогоор байхгүй байна.</p>
+        <?php } ?>
+      </div>
+
+      <!-- Staff Table -->
+      <div class="phone">
+        <?php if (!empty($departments)) { ?>
+            <?php foreach ($departments as $dept) { ?>
+                <table class="staff-table">
+                  <thead>
+                    <tr>
+                      <th colspan="4" style="text-align:center;"><?php echo htmlspecialchars($dept['name']); ?></th>
+                    </tr>
+                    <tr>
+                      <th>Албан тушаал</th>
+                      <th>Нэр</th>
+                      <th>Утас</th>
+                      <th>И-мэйл</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php if (!empty($staff_by_dept[$dept['id']])) { ?>
+                        <?php foreach ($staff_by_dept[$dept['id']] as $staff) { ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($staff['position']); ?></td>
+                                <td><?php echo htmlspecialchars($staff['name']); ?></td>
+                                <td><?php echo htmlspecialchars($staff['phone'] ?: '-'); ?></td>
+                                <td><?php echo htmlspecialchars($staff['email'] ?: '-'); ?></td>
+                            </tr>
+                        <?php } ?>
+                    <?php } else { ?>
+                        <tr><td colspan="4" style="text-align:center;">Ажилтан бүртгэгдээгүй байна</td></tr>
+                    <?php } ?>
+                  </tbody>
+                </table>
+            <?php } ?>
+        <?php } else { ?>
+            <p>Хэлтэс бүртгэгдээгүй байна.</p>
+        <?php } ?>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form action="contactform" method="post" id="form">
+          <div>
+            <input type="text" name="name" class="form-control" placeholder="Нэр" required>
+            <input type="text" name="subject" class="form-control" placeholder="Гарчиг" required>
+          </div>
+          <div>
+            <input type="email" name="mail" class="form-control" placeholder="И-мэйл хаяг" required>
+            <input type="text" name="phone" class="form-control" placeholder="Утасны дугаар" required>
+          </div>
+          <textarea rows="5" name="message" placeholder="Санал хүсэлт" class="form-control" required></textarea>
+          <input type="submit" name="submit" class="send-btn" value="Илгээх" onclick="successalert()">
+        </form>
+        <div><img src="images/contact-png1.png" alt=""></div>
+      </div>
+    </div>
+
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2676.3605273113653!2d106.83230931581456!3d47.87134667764446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96958644cc472f%3A0x7250ea0d533006e6!2z0KXQvtGC0YvQvSDRgdGC0LDQvdC00LDRgNGCLCDRhdGP0L3QsNC70YLRi9C9INCz0LDQt9Cw0YA!5e0!3m2!1sen!2smn!4v1651460908842!5m2!1sen!2smn" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <?php include("footer.php"); ?>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  <script src="assets/script.js"></script>
+  <script>
+    var form = document.getElementById('form');
+    function successalert() {
+      if (form.checkValidity()) { alert("Амжилттай илгээсэн"); }
+    }
+  </script>
+</body>
+</html>

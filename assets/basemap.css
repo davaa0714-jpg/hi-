@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+
+#map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+    background: linear-gradient(rgba(236, 244, 245), rgba(245, 228, 228));
+}
+
+#dash-intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+    text-align: center;
+}
+
+#map .container, #dash-intro .intro-wrapper{
+    width: 1300px;
+    margin: auto;
+    justify-content: center;
+}
+
+#map .subcontainer, #dash-intro .subcontainer{
+    width: 93%;
+    margin: auto;
+    /* display: flex;
+    justify-content: center; */
+}
+
+#dash-intro p{
+    font-size: 15px;
+    font-weight: 200;
+    padding: 10px 0;
+}
+
+#dash-intro h3{
+    font-size: 17px;
+    display: inline;
+    font-weight: 600;
+}
+
+.alert i{
+    margin-right: 8px;
+    color: crimson;
+    font-size: 17px;
+}
+
+.alert p{
+    font-style: italic;
+}
+
+.alert{
+    display: none;
+}
+
+.download i{
+    margin-right: 8px;
+}
+
+.download{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.download a{
+    color: crimson;
+    padding: 3px 10px;
+    text-decoration: none;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    box-shadow: inset 0 0 0 0 crimson;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.download a:last-child{
+    margin-left: 10px;
+}
+
+.download a:hover{
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 crimson;
+}
+
+
+#mapid{
+    width: 100%;
+    height: 750px;
+    border-radius: 15px;
+}
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar{
+    /* border: none; */
+    border: 1px solid rgba(211, 211, 211, 0.6);
+    border-radius: 8px;
+}
+
+.leaflet-touch .leaflet-bar a:first-child{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.leaflet-bar a, .leaflet-bar a:hover{
+    border-bottom: none;
+}
+
+.leaflet-touch .leaflet-bar a:last-child{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.leaflet-left .leaflet-control{
+    margin-left: 20px;
+}
+
+.leaflet-right .leaflet-control{
+    margin-right: 20px;
+}
+
+.leaflet-top .leaflet-control{
+    margin-top: 20px;
+}
+
+.leaflet-top, .leaflet-bottom{
+    z-index: 800;
+}
+
+.leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out{
+    color: crimson;
+    font-family: "Montserrat", sans-serif;
+}
+
+.leaflet-control-attribution a{
+    display: none;
+}
+
+.leaflet-container a.leaflet-popup-close-button{
+    padding: 8px 24px 0 0;
+}
+
+table{
+    font-family: "Montserrat", sans-serif;
+}
+
+td{
+    padding: 4px 5px;
+    line-height: 1;
+}
+
+td::first-letter{
+    text-transform: capitalize
+}
+
+td:first-child{
+    font-weight: 600;
+    min-width: 100px;
+}
+
+tr:last-child td{
+    padding-bottom: 7px;
+}
+
+tr:first-child td{
+    text-align: center;
+    font-weight: 700;
+    font-size: 12.5px;
+    padding: 7px 5px;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip{
+    /* box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; */
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(211, 211, 211, 0.6);
+}
+
+.leaflet-popup-tip{
+    display: none;
+}
+
+
+.leaflet-popup {
+    margin-bottom: 30px;
+}
+
+/* dashboard */
+.top-dash, .bottom-dash{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    grid-auto-flow: dense;
+    padding-bottom: 15px;
+}
+
+.last-dash{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    grid-auto-flow: dense;
+}
+
+.bottom-dash{
+    padding-top: 15px;
+}
+
+.top-grid, .bottom-grid, .last-grid{
+    padding: 35px 30px;
+    border-radius: 15px;
+    background-color: #fafaf8;
+    /* background-color: rgb(247, 247, 245); */
+    /* background-color: white; */
+    /* position: relative; */
+}
+
+
+.top-grid:nth-child(3){
+    grid-column: 2 / span 3; /* start at column line 1 and span 1 column */
+    grid-row: 1 / span 2; /* start at row line 1 and span 2 rows */
+}
+
+.top-grid:nth-child(4){
+    display: none;
+}
+
+.top-dash, .bottom-dash, .last-dash{
+    text-align: center;
+}
+
+.top-dash h2, .bottom-dash h2{
+    font-size: 35px;
+    color: #212529;
+    /* padding-bottom: 5px; */
+}
+
+.top-dash p, .bottom-dash p, .last-dash p{
+    font-size: 13px;
+    /* font-weight: 300; */
+    color: crimson;
+}
+
+.bottom-grid:nth-child(1){
+    grid-column: 1 / span 2; /* start at column line 1 and span 1 column */
+    grid-row: 1 / span 2; /* start at row line 1 and span 2 rows */
+}
+
+.time-range{
+    font-size: 13px;
+    /* font-weight: 300; */
+    padding-bottom: 15px;
+    color: gray;
+}
+
+/* .last-dash{
+    height: 250px;
+} */
+
+
+.bottom-grid table{
+    width: 100%;
+}
+
+.bottom-grid #title{
+    padding-bottom: 10px;
+}
+
+.bottom-grid tr td{
+    font-weight: 400;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 12.5px;
+}
+
+.bottom-grid tr td:last-child{
+    text-align: center;
+}
+
+.bottom-grid tr:last-child td{
+    border-bottom: none;
+}
+
+
+/* layer control */
+.leaflet-retina .leaflet-control-layers-toggle{
+    background-image: url("../images/layergroup.png");
+}
+
+.leaflet-control-layers-toggle{
+    background-image: url("../images/layergroup.png");
+    background-size: 55%;
+}
+
+.leaflet-control-layers-base span{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    margin-left: 8px;
+    transition: all ease;
+}
+
+.leaflet-control-layers-base span:hover{
+    opacity: 0.8;
+}
+
+.leaflet-control-layers-base {
+    padding: 10px;
+}
+
+.leaflet-touch .leaflet-control-layers{
+    border-radius: 8px;
+    border: 1px solid rgba(211, 211, 211, 0.6);
+}
+
+.leaflet-control-layers-base input[type="radio"]{
+    /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: crimson;
+  width: 18px;
+  height: 18px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-2px);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.leaflet-control-layers-base label div{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.leaflet-control-layers-base{
+    padding: 15px;
+}
+
+.leaflet-control-layers-base input[type="radio"]::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    background-color: crimson;
+  }
+
+.leaflet-control-layers-base input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+.leaflet-control-layers-base label:last-child{
+    margin-top: 8px;
+}
+
+
+.leaflet-marker-hover{
+    transition: all .3s;
+}
+
+@media(max-width:590px){
+    .download a:last-child{
+        margin-left: 0px;
+        display: none;
+    }
+    
+    .top-dash, .bottom-dash{
+        display: grid;
+        /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+        grid-auto-flow: dense;
+        padding-bottom: 15px;
+    }
+
+    .top-grid:nth-child(3){
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1; 
+        height: 220px;
+        display: none;
+    }
+
+    .bottom-grid:nth-child(1){
+        padding: 35px 20px;
+    }
+
+    .last-dash{
+        display: block;
+    }
+
+    .last-grid:last-child{
+        margin-top: 15px;
+    }
+    
+    #mapid{
+        height: 450px; 
+    }
+
+
+    .top-grid:nth-child(4){
+        display: block;
+        grid-column: 1 / span 2; /* start at column line 1 and span 1 column */
+        grid-row: 2 / span 1; /* start at row line 1 and span 2 rows */
+        height: 220px;
+    }
+
+    .alert{
+        display: block;
+    }
+    
+}

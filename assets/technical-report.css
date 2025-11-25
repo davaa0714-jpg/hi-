@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+
+#tech-rep-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+    background: linear-gradient(rgba(236, 244, 245), rgba(245, 228, 228));
+}
+
+#tech-rep-intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 24px;
+    text-align: center;
+}
+
+#tech-rep-content .container, #tech-rep-intro .intro-wrapper{
+    width: 1300px;
+    margin: auto;
+    justify-content: center;
+}
+
+#tech-rep-content .subcontainer, #tech-rep-intro .subcontainer{
+    width: 93%;
+    margin: auto;
+    /* display: flex;
+    justify-content: center; */
+}
+
+#tech-rep-intro p{
+    font-size: 15px;
+    font-weight: 200;
+    padding: 10px 0;
+}
+
+.first .first-intro, .second .second-intro, .third .third-intro, .fourth .fourth-intro{
+    padding-bottom: 30px;
+}
+
+.second .second-intro p, .third .third-intro p, .fourth .fourth-intro p{
+    font-weight: 300;
+}
+
+.second, .third, .fourth{
+    margin-top: 40px;
+}
+
+/* dashboard */
+.firstgrid-wrapper, .secondgrid-wrapper, .fourthgrid-wrapper{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    grid-auto-flow: dense;
+    padding-bottom: 15px;
+}
+
+.thirdgrid-wrapper{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    grid-auto-flow: dense;
+    padding-bottom: 15px;
+}
+
+
+.firstgrid, .secondgrid, .thirdgrid, .fourthgrid{
+    padding: 35px 30px;
+    border-radius: 15px;
+    background-color: #fafaf8;
+    text-align: center;
+}
+
+
+.firstgrid p, .secondgrid p, .thirdgrid p, .fourthgrid p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.firstgrid h3, .secondgrid h3, .thirdgrid h3{
+    font-size: 30px;
+    padding-bottom: 15px;
+}
+
+.divider{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.divider i, .divider1 i{
+    color: crimson;
+}
+
+.first-intro p{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.second-intro, .third-intro, .fourth-intro{
+    text-align: center;
+}
+
+.second-intro h3, .third-intro h3, .fourth-intro h3{
+    font-size: 25px;
+    color: crimson;
+    font-style: italic;
+}
+
+@media(max-width:590px){
+    .firstgrid-wrapper, .secondgrid-wrapper, .fourthgrid-wrapper, .thirdgrid-wrapper{
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+}
